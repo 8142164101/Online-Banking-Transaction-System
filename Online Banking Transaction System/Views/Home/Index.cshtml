@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+</DOCTYPE>
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>LOGIN TO NET BANKING</h2>
+
+    <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="Mansoor"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Dodium"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>
+CREATE TABLE STUDENT (
+    stdid number(5),
+    stdname varchar2(20),
+    dob date,
+    doj date,
+    fee number(5),
+    gender char
+);
+DESC STUDENT;
+INSERT INTO STUDENT (
+    stdid, stdname, dob, doj, fee, gender
+)
+VALUES (1, 'MANSOOR', '08-jun-1997', '25-oct-2001', 10000, 'M');
+INSERT INTO STUDENT (
+    stdid, stdname, dob, doj, fee, gender
+)
+VALUES (2, 'AHMED', '17-nov-2001', '26-oct-2001', 11000, 'M');
+ALTER TABLE STUDENT ADD PHONE_NO NUMBER(10);
+ALTER TABLE STUDENT RENAME COLUMN PHONE_NO TO STUDENT_NO;
+ALTER TABLE STUDENT RENAME TO STUDENT_INFO;
+DELETE FROM STUDENT_INFO WHERE STDID = 2;
